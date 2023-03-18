@@ -50,6 +50,7 @@ public class menu implements CommandExecutor, Listener {
             inv.setItem(i, getItem(new ItemStack(Material.GRAY_STAINED_GLASS_PANE), " ", " "));
         }
         //creates the item inventory
+        //I might make an easier process for doing this later
         inv.setItem(10, getItem(new ItemStack(Material.SLIME_BLOCK), "&eLeaping", "&eClick to select &8Bootsts the user up 10 blocks", "&c60 second cooldown"));
         inv.setItem(11, getItem(new ItemStack(Material.BEACON), "&bLightning", "&eClick to select &8Strikes all mobs within", "&8a 5 block range dealing 10 damage", "&c2min cooldown"));
         inv.setItem(12, getItem(new ItemStack(Material.ARROW), "&eFire an arrow", "&eClick to apply &8Fires an arrow (that's it)", "&c2 second cooldown"));
