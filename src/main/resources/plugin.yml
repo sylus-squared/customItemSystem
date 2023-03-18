@@ -1,0 +1,15 @@
+name: itemSystem
+version: '${project.version}'
+main: com.sylus.customitemsystem.ItemSystem
+api-version: 1.18
+commands:
+  fly:
+    description: Toggles flying
+    usage: /fly
+    aliases: [f, flying]
+    permission: fly
+  menu:
+    description: Opens a test menu
+    usage:  /menu
+    aliases: [testMenu, menuTest]
+
