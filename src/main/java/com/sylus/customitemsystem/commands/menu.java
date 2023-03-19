@@ -71,6 +71,8 @@ public class menu implements CommandExecutor, Listener {
         player.openInventory(inv);
         return true;
     }
+
+    //USE NBT INSTEAD
     private ItemStack getItem(ItemStack item, String name, String ... lore){
         ItemMeta meta = item.getItemMeta();
         meta.setDisplayName(ChatColor.translateAlternateColorCodes('&', name));
