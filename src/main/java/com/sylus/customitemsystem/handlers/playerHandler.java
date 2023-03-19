@@ -21,7 +21,7 @@ public class playerHandler implements Listener {
     public void onPlayerJoin(PlayerJoinEvent event){
         Player player = event.getPlayer();
 //Welcomes every player to the server
-        player.sendMessage(ChatColor.LIGHT_PURPLE + "Welcome to the server");
+        player.sendMessage(ChatColor.LIGHT_PURPLE + "Welcome to the server. Currently testing adding lore /loreadd. build 10");
       /*
         ItemStack item = new ItemStack(Material.COOKED_BEEF, 64);
         Inventory inv = player.getInventory();

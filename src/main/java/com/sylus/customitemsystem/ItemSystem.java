@@ -4,6 +4,7 @@ import com.sylus.customitemsystem.commands.menu;
 import com.sylus.customitemsystem.handlers.playerHandler;
 import com.sylus.customitemsystem.handlers.torchHandler;
 import com.sylus.customitemsystem.manager.cooldowns;
+import com.sylus.customitemsystem.manager.itemManager;
 import org.bukkit.Bukkit;
 import org.bukkit.ChatColor;
 import org.bukkit.plugin.java.JavaPlugin;
@@ -20,6 +21,7 @@ public final class ItemSystem extends JavaPlugin {
         new torchHandler(this);
         new playerHandler(this);
         new cooldowns(this);
+        new itemManager();
 
 
     }

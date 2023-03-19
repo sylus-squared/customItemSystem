@@ -12,4 +12,8 @@ commands:
     description: Opens a test menu
     usage:  /menu
     aliases: [testMenu, menuTest]
+  loreAddTest:
+    description: Adds lore to the item in your hand, just a test
+    usage: /loreAdd
+    aliases: la
 

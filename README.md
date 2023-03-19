@@ -39,7 +39,7 @@ Right click an item and it will have a 20% cahance to give you a gapple if you d
 Final one Right click an item and it will give all entities within a 30 block radius glow effect
 
 (An example of the GUI)
-![alt text](https://github.com/SylusSquared7/customItemSystem/tree/main/Images/ItemDemo.png?raw=true)
+![The image](https://github.com/SylusSquared7/customItemSystem/tree/main/Images/ItemDemo.png?raw=true)
 
 Armour:
 
