@@ -1,8 +1,8 @@
 package com.sylus.customitemsystem;
 import com.sylus.customitemsystem.commands.fly;
+import com.sylus.customitemsystem.commands.loreAddTest;
 import com.sylus.customitemsystem.commands.menu;
 import com.sylus.customitemsystem.handlers.playerHandler;
-import com.sylus.customitemsystem.handlers.torchHandler;
 import com.sylus.customitemsystem.manager.cooldowns;
 import com.sylus.customitemsystem.manager.itemManager;
 import org.bukkit.Bukkit;
@@ -17,8 +17,9 @@ public final class ItemSystem extends JavaPlugin {
         Bukkit.getLogger().info(ChatColor.GREEN + "Plugin started");
         getCommand("fly").setExecutor(new fly());
         getCommand("menu").setExecutor(new menu(this));
+        getCommand("loreAddTest").setExecutor(new loreAddTest());
 
-        new torchHandler(this);
+
         new playerHandler(this);
         new cooldowns(this);
         new itemManager();

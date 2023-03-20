@@ -12,8 +12,6 @@ For example you can choose a stick as an item and make it shoot arrows when righ
 Another example is you can get a sword and make it launch the player up when they right click
 Another example is you can take a pair of boots and make them launch you up when you press shift
 
-This plugin will be built for 1.8 and WILL NOT have multiple effects on one item
-
 Ideas for custom properties:
 
 Items:

@@ -1,5 +1,6 @@
 package com.sylus.customitemsystem.commands;
 
+import org.bukkit.Bukkit;
 import org.bukkit.ChatColor;
 import org.bukkit.command.Command;
 import org.bukkit.command.CommandExecutor;
@@ -12,7 +13,6 @@ import java.util.ArrayList;
 import java.util.List;
 
 import static com.sylus.customitemsystem.manager.itemManager.addLore;
-//Not working right now. Probbly something to do with the YML
 public class loreAddTest implements CommandExecutor {
     @Override
     public boolean onCommand(CommandSender sender, Command command, String label, String [] args){
@@ -26,20 +26,29 @@ public class loreAddTest implements CommandExecutor {
             player.sendMessage(ChatColor.RED + "Please have an item in your hand");
             return true;
         }
+        ItemStack item = player.getInventory().getItemInMainHand();
+        if (item.getItemMeta().hasLore() != true){
+            ItemStack heldItem = player.getInventory().getItemInMainHand();
+            ItemMeta meta = heldItem.getItemMeta();
+            List<String> newLore = new ArrayList();
+            newLore.add("New lore test");
+            meta.setLore(newLore);
+            heldItem.setItemMeta(meta);
+            player.getInventory().setItemInMainHand(heldItem);
+            player.sendMessage(ChatColor.GOLD + "Test");
+            return true;
+        }
+
+        Bukkit.getLogger().info(ChatColor.GREEN + "Test");
         ItemStack heldItem = player.getInventory().getItemInMainHand();
         ItemMeta meta = heldItem.getItemMeta();
-        List<String> newLore = new ArrayList();
-        newLore.add("This is new lore");
-        meta.setLore(newLore);
+        List oldMeta = player.getInventory().getItemInMainHand().getItemMeta().getLore();
+        List<String> lore = meta.hasLore() ? meta.getLore() : new ArrayList<>();
+        lore.add("New lore test");
+        meta.setLore(lore);
         heldItem.setItemMeta(meta);
         player.getInventory().setItemInMainHand(heldItem);
         player.sendMessage(ChatColor.GOLD + "Test");
-        /*
-        ItemMeta meta = player.getInventory().getItemInMainHand().getItemMeta();
-        ItemStack item = player.getInventory().getItemInMainHand();
-        ItemMeta metaToAdd = addLore(item, meta, meta, );
-        player.getInventory().getItemInMainHand().setItemMeta(metaToAdd);
-*/
 
 
         return true;
