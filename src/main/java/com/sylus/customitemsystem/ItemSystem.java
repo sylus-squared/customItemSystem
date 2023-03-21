@@ -2,6 +2,7 @@ package com.sylus.customitemsystem;
 import com.sylus.customitemsystem.commands.fly;
 import com.sylus.customitemsystem.commands.loreAddTest;
 import com.sylus.customitemsystem.commands.menu;
+import com.sylus.customitemsystem.events.launcher;
 import com.sylus.customitemsystem.handlers.playerHandler;
 import com.sylus.customitemsystem.manager.cooldowns;
 import com.sylus.customitemsystem.manager.itemManager;
@@ -20,9 +21,13 @@ public final class ItemSystem extends JavaPlugin {
         getCommand("loreAddTest").setExecutor(new loreAddTest());
 
 
+
+
+
         new playerHandler(this);
         new cooldowns(this);
         new itemManager();
+        new launcher();
 
 
     }
