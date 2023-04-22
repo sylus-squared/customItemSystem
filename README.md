@@ -16,25 +16,25 @@ Ideas for custom properties:
 
 Items:
 
-Right click the item and it will launch the player up 10 blocks
+Right click the item and it will launch the player up 10 blocks **DONE**
 
-Right click an item and it will strike lightning on everything within 5 blocks doing 10 damage
+Right click an item and it will strike lightning on everything within 5 blocks doing 10 damage **DONE**
 
-Right click an item and it will shoot an arrow that damages anything in it's path
+Right click an item and it will shoot an arrow that damages anything in it's path **DONE**
 
-Right click an item and it will throw a peice of TNT that will explode after 5 seconds
+Right click an item and it will throw a peice of TNT that will explode after 5 seconds **DONE**
 
-Right click an item and it will shoot an egg
+Right click an item and it will shoot an egg  **DONE**
 
 Right click an item and it will set anything in it's path on fire
 
-Right click an item and it will launch all entities in a 5 block radius up 20 blocks
+Right click an item and it will launch all entities in a 5 block radius up 20 blocks **DONE**
 
 Right click an item and it will rain anvils from the sky
 
 Right click an item and it will have a 20% cahance to give you a gapple if you dont get it then you take 5 damage
 
-Final one Right click an item and it will give all entities within a 30 block radius glow effect
+Final one Right click an item and it will give all entities within a 30 block radius glow effect **DONE**
 
 (An example of the GUI)
 ![The image](https://github.com/SylusSquared7/customItemSystem/tree/main/Images/ItemDemo.png?raw=true)
