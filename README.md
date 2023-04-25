@@ -71,3 +71,5 @@ Backend plugin ideas:
 3.Admin plugin. Allows trusted people, added with /trust add {admin or mod}, to give someone a rank choosing from defult, recognised and OP using the command /promote {defult, recognised and OP} I also need to make a ranks plugin for this one. This will use mongoDB
 
 2.Testing plugin, uses a mongoDB databse to add tests. Users can then use a GUI to select tests and say if they were a sucsess or not and can add notes if they want. The GUI will dispaly all open tests
+
+3.A hybrid anticheat
