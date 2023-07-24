@@ -60,16 +60,3 @@ Breaks as soon as the person is hit (Rubbish armour)
 Drops iron golems from 30 blocks above the player when on 2hp (1 Heart) This one needs to check if there are blocks 30 blocks above the player
 
 And finally lets the player be jesus and walk on water. It just needs to check if they are standing on water and teleport them up untill they are not This will need to take the item and add NBT data to it. For example it could add the NBT tag of leapingArmour for armour that makes the player jump higher.
-
-
-!NOT IN THIS PLUGIN!
-
-Backend plugin ideas:
-
-1.Reports plugin. Allows users to use /report reson (Coose a reson from hacking (Includes Xray), spamming and bad skin. It will then log the report on a website built with Anvil
-
-3.Admin plugin. Allows trusted people, added with /trust add {admin or mod}, to give someone a rank choosing from defult, recognised and OP using the command /promote {defult, recognised and OP} I also need to make a ranks plugin for this one. This will use mongoDB
-
-2.Testing plugin, uses a mongoDB databse to add tests. Users can then use a GUI to select tests and say if they were a sucsess or not and can add notes if they want. The GUI will dispaly all open tests
-
-3.A hybrid anticheat
