@@ -37,7 +37,7 @@ public class loreAddTest implements CommandExecutor {
                 meta.setLore(lore);
                 heldItem.setItemMeta(meta);
                 player.getInventory().setItemInMainHand(heldItem);
-                heldItem = NBTEditor.set( heldItem, "A VALUE", "test", "value" );
+                heldItem = NBTEditor.set( heldItem, args, "test", "value" );
                 player.setItemInHand( heldItem );
                 player.sendMessage(ChatColor.GOLD + "Test");
                 return true;
@@ -45,7 +45,7 @@ public class loreAddTest implements CommandExecutor {
 
             ItemStack item = player.getItemInHand();
             if ( item != null ) {
-                item = NBTEditor.set( item, "A VALUE", "test", "value" );
+                item = NBTEditor.set( item, args, "test", "value" );
                 player.setItemInHand( item );
                 player.sendMessage( "" + NBTEditor.getString( item, "test", "value" ) );
             }
