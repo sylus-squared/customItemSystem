@@ -18,8 +18,8 @@ public class ItemHandlers implements Listener {
         Bukkit.getPluginManager().registerEvents(this, plugin);
     }
 
-    private int cooldownSeconds = 10;
-    private String source = "Right click lightning";
+    private int cooldownSeconds;
+    private String source;
     @EventHandler
     public void onRightClick(PlayerInteractEvent event) {
         if (event.getAction().equals(Action.RIGHT_CLICK_AIR) || event.getAction().equals(Action.RIGHT_CLICK_BLOCK)) {
@@ -40,6 +40,7 @@ public class ItemHandlers implements Listener {
                             long cooldownRemainingSeconds = cooldowns.getCooldown(player, source);
                             player.sendMessage(ChatColor.RED + "You must wait " + cooldownRemainingSeconds + ChatColor.RED + " seconds before you can use this item again.");
                         }
+                        break;
 
                     case "LIGHTNING":
                         cooldownSeconds = 60;
@@ -54,6 +55,7 @@ public class ItemHandlers implements Listener {
                             long cooldownRemainingSeconds = cooldowns.getCooldown(player, source);
                             player.sendMessage(ChatColor.RED + "You must wait " + cooldownRemainingSeconds + ChatColor.RED + " seconds before you can use this item again.");
                         }
+                        break;
 
                     case "GLOWOING":
                         cooldownSeconds = 60;
@@ -67,6 +69,8 @@ public class ItemHandlers implements Listener {
                             long cooldownRemainingSeconds = cooldowns.getCooldown(player, source);
                             player.sendMessage(ChatColor.RED + "You must wait " + cooldownRemainingSeconds + ChatColor.RED + " seconds before you can use this item again.");
                         }
+                        break;
+
                     case "ARROW":
                         cooldownSeconds = 60;
                         source = "Right click Arrow";
@@ -80,6 +84,8 @@ public class ItemHandlers implements Listener {
                             long cooldownRemainingSeconds = cooldowns.getCooldown(player, source);
                             player.sendMessage(ChatColor.RED + "You must wait " + cooldownRemainingSeconds + ChatColor.RED + " seconds before you can use this item again.");
                         }
+                        break;
+
                     case "EGGTHROW":
                         cooldownSeconds = 60;
                         source = "Right click Egg";
@@ -93,6 +99,8 @@ public class ItemHandlers implements Listener {
                             long cooldownRemainingSeconds = cooldowns.getCooldown(player, source);
                             player.sendMessage(ChatColor.RED + "You must wait " + cooldownRemainingSeconds + ChatColor.RED + " seconds before you can use this item again.");
                         }
+                        break;
+
                     case "OTHERLAUNCHER":
                         cooldownSeconds = 60;
                         source = "Right click otherLauncher";
@@ -106,6 +114,8 @@ public class ItemHandlers implements Listener {
                             long cooldownRemainingSeconds = cooldowns.getCooldown(player, source);
                             player.sendMessage(ChatColor.RED + "You must wait " + cooldownRemainingSeconds + ChatColor.RED + " seconds before you can use this item again.");
                         }
+                        break;
+
                     case "TNTTHROW":
                         cooldownSeconds = 60;
                         source = "Right click tntThrow";
@@ -119,6 +129,38 @@ public class ItemHandlers implements Listener {
                             long cooldownRemainingSeconds = cooldowns.getCooldown(player, source);
                             player.sendMessage(ChatColor.RED + "You must wait " + cooldownRemainingSeconds + ChatColor.RED + " seconds before you can use this item again.");
                         }
+                        break;
+
+                    case "ANVILRAIN":
+                        cooldownSeconds = 60;
+                        source = "Right click anvil rain";
+                        if (!cooldowns.hasCooldown(player, source)) {
+                            cooldowns.setCooldown(player, cooldownSeconds, source);
+                            AnvilRain anvilRain = new AnvilRain();
+                            anvilRain.anvilThrowLogic(player);
+
+                        } else {
+                            event.setCancelled(true);
+                            long cooldownRemainingSeconds = cooldowns.getCooldown(player, source);
+                            player.sendMessage(ChatColor.RED + "You must wait " + cooldownRemainingSeconds + ChatColor.RED + " seconds before you can use this item again.");
+                        }
+                        break;
+
+                    case "CACTUSTHROW":
+                        cooldownSeconds = 60;
+                        source = "Right click cactus";
+                        if (!cooldowns.hasCooldown(player, source)) {
+                            cooldowns.setCooldown(player, cooldownSeconds, source);
+                            CactusThrow cactusThrow = new CactusThrow();
+                            cactusThrow.cactusThrowLogic(player);
+
+                        } else {
+                            event.setCancelled(true);
+                            long cooldownRemainingSeconds = cooldowns.getCooldown(player, source);
+                            player.sendMessage(ChatColor.RED + "You must wait " + cooldownRemainingSeconds + ChatColor.RED + " seconds before you can use this item again.");
+                        }
+                        break;
+
                 }
             }
         }

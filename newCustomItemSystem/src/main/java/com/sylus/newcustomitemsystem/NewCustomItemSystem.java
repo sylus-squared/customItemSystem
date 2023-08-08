@@ -1,6 +1,6 @@
 package com.sylus.newcustomitemsystem;
 
-import com.sylus.newcustomitemsystem.commands.loreAddTest;
+import com.sylus.newcustomitemsystem.commands.LoreAddTest;
 import com.sylus.newcustomitemsystem.events.*;
 import com.sylus.newcustomitemsystem.handlers.ItemHandlers;
 import com.sylus.newcustomitemsystem.handlers.playerHandler;
@@ -16,15 +16,12 @@ public final class NewCustomItemSystem extends JavaPlugin {
         System.out.println("Plugin started");
         getCommand("fly").setExecutor(new com.sylus.newcustomitemsystem.commands.fly());
         getCommand("menu").setExecutor(new com.sylus.newcustomitemsystem.commands.menu(this));
-        getCommand("loreAddTest").setExecutor(new loreAddTest());
+        getCommand("loreAddTest").setExecutor(new LoreAddTest());
 
         new playerHandler(this);
         new itemManager();
         new ItemHandlers().itemHandlerHandler(this);
         new MenuClick().menuHandeler(this);
-        new cactusThrow().cactusThrowHandeler(this); // Does not work RN
-        new anvilRain().anvilRainHandeler(this); // Does not work rn
-
     }
 
     @Override

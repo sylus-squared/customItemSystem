@@ -22,6 +22,9 @@ public final class NewCustomItemSystem extends JavaPlugin {
         new itemManager();
         new ItemHandlers().itemHandlerHandler(this);
         new MenuClick().menuHandeler(this);
+        new cactusThrow().cactusThrowHandeler(this); // Does not work RN
+        new anvilRain().anvilRainHandeler(this); // Kinda works but needs a lot more work
+
     }
 
     @Override

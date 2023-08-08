@@ -31,7 +31,7 @@ public class fireLaser implements Listener {
             if (player.getInventory().getItemInMainHand().getItemMeta() != null){
                 ItemStack heldItem = player.getInventory().getItemInMainHand();
                 if (Objects.equals(NBTEditor.getString(heldItem, "test", "value"), "FIRELASER")){
-                    String source = "Fire laser";
+                    String source = "Right click fireLaser";
                     if (!cooldowns.hasCooldown(player, source)) {
                         Location location = player.getLocation();
                         World world = player.getWorld();
