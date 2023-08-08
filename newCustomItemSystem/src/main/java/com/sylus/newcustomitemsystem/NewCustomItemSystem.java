@@ -14,6 +14,7 @@ public final class NewCustomItemSystem extends JavaPlugin {
         // Plugin startup logic
 
         System.out.println("Plugin started");
+        System.out.println("[CustomItemSystem]: Started the plugin: build number 52");
         getCommand("fly").setExecutor(new com.sylus.newcustomitemsystem.commands.fly());
         getCommand("menu").setExecutor(new com.sylus.newcustomitemsystem.commands.menu(this));
         getCommand("loreAddTest").setExecutor(new LoreAddTest());

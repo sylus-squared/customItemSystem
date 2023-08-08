@@ -17,7 +17,7 @@ public class playerHandler implements Listener {
     public void onPlayerJoin(PlayerJoinEvent event){
         Player player = event.getPlayer();
 //Welcomes every player to the server
-        player.sendMessage(ChatColor.LIGHT_PURPLE + "Welcome. Currently testing: A lot", ChatColor.YELLOW + "build 40");
+        player.sendMessage(ChatColor.LIGHT_PURPLE + "Welcome. Currently testing: A lot", ChatColor.YELLOW + "build 52");
 
     }
 }
