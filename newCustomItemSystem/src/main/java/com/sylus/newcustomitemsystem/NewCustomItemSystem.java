@@ -15,14 +15,19 @@ public final class NewCustomItemSystem extends JavaPlugin {
 
         System.out.println("Plugin started");
         System.out.println("[CustomItemSystem]: Started the plugin: build number 52");
+
         getCommand("fly").setExecutor(new com.sylus.newcustomitemsystem.commands.fly());
         getCommand("menu").setExecutor(new com.sylus.newcustomitemsystem.commands.menu(this));
         getCommand("loreAddTest").setExecutor(new LoreAddTest());
+
+        System.out.println("[CustomItemSystem]: (debug) Loaded the commands");
 
         new playerHandler(this);
         new itemManager();
         new ItemHandlers().itemHandlerHandler(this);
         new MenuClick().menuHandeler(this);
+
+        System.out.println("[CustomItemSystem]: (debug) Loaded the handlers");
     }
 
     @Override
