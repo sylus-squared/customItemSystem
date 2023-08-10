@@ -5,7 +5,10 @@ import com.sylus.newcustomitemsystem.events.*;
 import com.sylus.newcustomitemsystem.handlers.ItemHandlers;
 import com.sylus.newcustomitemsystem.handlers.playerHandler;
 import com.sylus.newcustomitemsystem.manager.itemManager;
+import org.bukkit.Bukkit;
 import org.bukkit.plugin.java.JavaPlugin;
+
+import java.util.logging.Level;
 
 public final class NewCustomItemSystem extends JavaPlugin {
 
@@ -13,8 +16,8 @@ public final class NewCustomItemSystem extends JavaPlugin {
     public void onEnable() {
         // Plugin startup logic
 
-        System.out.println("Plugin started");
-        System.out.println("[CustomItemSystem]: Started the plugin: build number 52");
+        Bukkit.getLogger().log(Level.INFO, "[CustomItemSystem]: Plugin started");
+        Bukkit.getLogger().log(Level.INFO, "[CustomItemSystem]: Started the plugin: build number 53");
 
         getCommand("fly").setExecutor(new com.sylus.newcustomitemsystem.commands.fly());
         getCommand("menu").setExecutor(new com.sylus.newcustomitemsystem.commands.menu(this));
@@ -27,12 +30,13 @@ public final class NewCustomItemSystem extends JavaPlugin {
         new ItemHandlers().itemHandlerHandler(this);
         new MenuClick().menuHandeler(this);
 
-        System.out.println("[CustomItemSystem]: (debug) Loaded the handlers");
+        Bukkit.getLogger().log(Level.INFO, "[CustomItemSystem]: Loaded the handlers");
     }
 
     @Override
     public void onDisable() {
         // Plugin shutdown logic
-        System.out.println("Plugin shutdown");
+        Bukkit.getLogger().log(Level.INFO, "[CustomItemSystem]: Plugin shutdown");
+
     }
 }
