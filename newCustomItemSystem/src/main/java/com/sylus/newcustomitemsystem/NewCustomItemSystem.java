@@ -1,6 +1,7 @@
 package com.sylus.newcustomitemsystem;
 
 import com.sylus.newcustomitemsystem.commands.LoreAddTest;
+import com.sylus.newcustomitemsystem.commands.GetUUID;
 import com.sylus.newcustomitemsystem.events.*;
 import com.sylus.newcustomitemsystem.handlers.ItemHandlers;
 import com.sylus.newcustomitemsystem.handlers.playerHandler;
@@ -22,6 +23,7 @@ public final class NewCustomItemSystem extends JavaPlugin {
         getCommand("fly").setExecutor(new com.sylus.newcustomitemsystem.commands.fly());
         getCommand("menu").setExecutor(new com.sylus.newcustomitemsystem.commands.menu(this));
         getCommand("loreAddTest").setExecutor(new LoreAddTest());
+        getCommand("getUUID").setExecutor(new GetUUID());
 
         System.out.println("[CustomItemSystem]: (debug) Loaded the commands");
 
