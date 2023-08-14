@@ -16,9 +16,9 @@ public class playerHandler implements Listener {
     @EventHandler
     public void onPlayerJoin(PlayerJoinEvent event){
         Player player = event.getPlayer();
-//Welcomes every player to the server
-        player.sendMessage(ChatColor.LIGHT_PURPLE + "Welcome. Currently testing: A lot", ChatColor.YELLOW + "build 52");
-
+        //Welcomes every player to the server
+        player.sendMessage(ChatColor.LIGHT_PURPLE + "Welcome. Currently testing: Cactus throw and anvil rain ", ChatColor.YELLOW + "build 53");
+        player.sendMessage(ChatColor.RED + "Please be sure to keep up with updates at https://github.com/SylusSquared7/customItemSystem");
     }
 }
 
