@@ -3,6 +3,8 @@ This is a repo for a minecraft 1.18 custom item system I am making
 You are welcome to use it if you want but I would not recomend it
 
 This will probbly be very buggy and unstable ¯\_(ツ)_/¯. Feel free to open an issue if you find one but there is a low chance that I will acctually fix it in this plugin. Although it will help me with future plugins and systems.
+Please bear in mind this is my first propper attempt at a plugin, all my others were just messing around
+
 
 Planned:
 Make a GUI based custom Item system
