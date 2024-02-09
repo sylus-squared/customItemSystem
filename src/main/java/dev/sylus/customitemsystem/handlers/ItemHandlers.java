@@ -1,7 +1,6 @@
 package dev.sylus.customitemsystem.handlers;
 
 import dev.sylus.customitemsystem.CustomItemSystem;
-import com.sylus.customitemsystem.events.*;
 import dev.sylus.customitemsystem.manager.Cooldowns;
 import dev.sylus.customitemsystem.events.*;
 import io.github.bananapuncher714.nbteditor.NBTEditor;

@@ -4,7 +4,6 @@ import dev.sylus.customitemsystem.commands.Fly;
 import dev.sylus.customitemsystem.commands.LoreAddTest;
 import dev.sylus.customitemsystem.commands.GetUUID;
 import dev.sylus.customitemsystem.commands.Menu;
-import com.sylus.customitemsystem.events.*;
 import dev.sylus.customitemsystem.handlers.ItemHandlers;
 import dev.sylus.customitemsystem.handlers.PlayerHandler;
 import dev.sylus.customitemsystem.manager.ItemManager;
