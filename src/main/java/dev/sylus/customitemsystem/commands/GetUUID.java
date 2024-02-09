@@ -1,4 +1,4 @@
-package com.sylus.customitemsystem.commands;
+package dev.sylus.customitemsystem.commands;
 
 import net.md_5.bungee.api.chat.ClickEvent;
 import net.md_5.bungee.api.chat.ComponentBuilder;

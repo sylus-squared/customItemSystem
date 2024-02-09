@@ -1,4 +1,4 @@
-package com.sylus.customitemsystem.commands;
+package dev.sylus.customitemsystem.commands;
 
 import io.github.bananapuncher714.nbteditor.NBTEditor;
 import org.bukkit.Bukkit;

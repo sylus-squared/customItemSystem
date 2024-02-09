@@ -1,7 +1,7 @@
-package com.sylus.customitemsystem.commands;
+package dev.sylus.customitemsystem.commands;
 
 
-import com.sylus.customitemsystem.CustomItemSystem;
+import dev.sylus.customitemsystem.CustomItemSystem;
 import org.bukkit.Bukkit;
 import org.bukkit.ChatColor;
 import org.bukkit.Material;

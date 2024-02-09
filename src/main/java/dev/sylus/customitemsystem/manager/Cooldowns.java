@@ -1,4 +1,4 @@
-package com.sylus.customitemsystem.manager;
+package dev.sylus.customitemsystem.manager;
 
 import org.bukkit.entity.Player;
 import org.bukkit.event.Listener;

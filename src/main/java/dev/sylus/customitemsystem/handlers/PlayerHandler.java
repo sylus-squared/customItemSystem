@@ -1,6 +1,6 @@
-package com.sylus.customitemsystem.handlers;
+package dev.sylus.customitemsystem.handlers;
 
-import com.sylus.customitemsystem.CustomItemSystem;
+import dev.sylus.customitemsystem.CustomItemSystem;
 import org.bukkit.Bukkit;
 import org.bukkit.ChatColor;
 import org.bukkit.entity.Player;
@@ -16,9 +16,8 @@ public class PlayerHandler implements Listener {
     @EventHandler
     public void onPlayerJoin(PlayerJoinEvent event){
         Player player = event.getPlayer();
-        //Welcomes every player to the server
+        // Remember to actually update the build number
         player.sendMessage(ChatColor.LIGHT_PURPLE + "Welcome. Currently testing: Cactus throw and anvil rain ", ChatColor.YELLOW + "build 53");
-        player.sendMessage(ChatColor.RED + "Please be sure to keep up with updates at https://github.com/SylusSquared7/customItemSystem");
     }
 }
 

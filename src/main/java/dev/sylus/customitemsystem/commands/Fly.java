@@ -1,4 +1,4 @@
-package com.sylus.customitemsystem.commands;
+package dev.sylus.customitemsystem.commands;
 
 import org.bukkit.ChatColor;
 import org.bukkit.command.Command;

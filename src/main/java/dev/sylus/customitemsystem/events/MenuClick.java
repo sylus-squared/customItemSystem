@@ -1,6 +1,6 @@
-package com.sylus.customitemsystem.events;
+package dev.sylus.customitemsystem.events;
 
-import com.sylus.customitemsystem.CustomItemSystem;
+import dev.sylus.customitemsystem.CustomItemSystem;
 import io.github.bananapuncher714.nbteditor.NBTEditor;
 import org.bukkit.Bukkit;
 import org.bukkit.ChatColor;
@@ -23,7 +23,7 @@ public class MenuClick implements Listener {
     }
 
     @EventHandler
-    public void clickEvent(InventoryClickEvent event){
+    public void clickEvent(InventoryClickEvent event){ // Move this to a .yml based system
         Player player = (Player) event.getWhoClicked();
         Inventory inv = event.getClickedInventory();
         ItemStack heldItem = player.getInventory().getItemInMainHand();

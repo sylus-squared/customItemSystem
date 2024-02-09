@@ -1,4 +1,4 @@
-package com.sylus.customitemsystem.events;
+package dev.sylus.customitemsystem.events;
 
 import io.github.bananapuncher714.nbteditor.NBTEditor;
 import org.bukkit.*;

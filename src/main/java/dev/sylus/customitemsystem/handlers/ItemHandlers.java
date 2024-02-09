@@ -1,8 +1,9 @@
-package com.sylus.customitemsystem.handlers;
+package dev.sylus.customitemsystem.handlers;
 
-import com.sylus.customitemsystem.CustomItemSystem;
+import dev.sylus.customitemsystem.CustomItemSystem;
 import com.sylus.customitemsystem.events.*;
-import com.sylus.customitemsystem.manager.Cooldowns;
+import dev.sylus.customitemsystem.manager.Cooldowns;
+import dev.sylus.customitemsystem.events.*;
 import io.github.bananapuncher714.nbteditor.NBTEditor;
 import org.bukkit.Bukkit;
 import org.bukkit.ChatColor;

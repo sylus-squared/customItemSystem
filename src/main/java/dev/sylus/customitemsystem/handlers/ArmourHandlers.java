@@ -1,6 +1,6 @@
-package com.sylus.customitemsystem.handlers;
+package dev.sylus.customitemsystem.handlers;
 
-import com.sylus.customitemsystem.CustomItemSystem;
+import dev.sylus.customitemsystem.CustomItemSystem;
 import org.bukkit.Bukkit;
 import org.bukkit.entity.Player;
 import org.bukkit.event.EventHandler;

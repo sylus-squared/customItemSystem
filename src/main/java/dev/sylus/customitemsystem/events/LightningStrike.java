@@ -1,4 +1,4 @@
-package com.sylus.customitemsystem.events;
+package dev.sylus.customitemsystem.events;
 
 import org.bukkit.entity.Entity;
 import org.bukkit.entity.LivingEntity;
