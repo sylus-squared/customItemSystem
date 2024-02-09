@@ -1,0 +1,27 @@
+name: newCustomItemSystem
+version: '${project.version}'
+main: com.sylus.newcustomitemsystem.NewCustomItemSystem
+api-version: 1.18
+
+commands:
+  fly:
+    usage: /fly
+    aliases: /f
+    description: This command allows the user to toggle flight
+    permission: fly
+
+  loreAddTest:
+    usage: /loreAddTest
+    aliases: /lt
+    description: This is a command for testing my lore and NBT logic
+
+  menu:
+    usage: /menu
+    aliases: /mu
+    description: opens a testing menu
+
+  getUUID:
+    usage: /getUUID
+    description: Gets a users UUID from their username
+
+
