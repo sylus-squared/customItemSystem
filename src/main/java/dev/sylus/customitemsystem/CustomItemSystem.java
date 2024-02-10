@@ -8,13 +8,16 @@ import dev.sylus.customitemsystem.handlers.ItemHandlers;
 import dev.sylus.customitemsystem.handlers.PlayerHandler;
 import dev.sylus.customitemsystem.manager.ItemManager;
 import dev.sylus.customitemsystem.events.MenuClick;
+import dev.sylus.customitemsystem.utils.Files;
 import org.bukkit.plugin.java.JavaPlugin;
 
 public final class CustomItemSystem extends JavaPlugin {
+    public Files files;
 
     @Override
     public void onEnable() {
         // Plugin startup logic
+        files = new Files(this, "items.yml");
 
 
         getCommand("fly").setExecutor(new Fly());

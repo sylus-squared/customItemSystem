@@ -22,6 +22,21 @@ public class MenuClick implements Listener {
         Bukkit.getPluginManager().registerEvents(this, plugin);
     }
 
+    /*
+    The YAML file is structured as followed
+    <key>:
+        cooldown: <cooldown>
+        lore: <lore1>
+        ..... The number of lore lines depends on the item
+        lore3: <lore3>
+        item name <item name>
+
+    <key>:
+       cooldown: <cooldown>
+       lore: <lore1>
+       item name <item name>
+    */
+
     @EventHandler
     public void clickEvent(InventoryClickEvent event){ // Move this to a .yml based system
         Player player = (Player) event.getWhoClicked();
