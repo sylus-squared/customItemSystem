@@ -28,7 +28,7 @@ public final class CustomItemSystem extends JavaPlugin {
         new PlayerHandler(this);
         new ItemManager();
         new ItemHandlers().itemHandlerHandler(this);
-        new MenuClick().menuHandeler(this);
+        new MenuClick(files).menuHandeler(this);
     }
 
     @Override
