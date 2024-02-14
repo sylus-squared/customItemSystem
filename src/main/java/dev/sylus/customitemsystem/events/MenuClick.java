@@ -69,6 +69,7 @@ public class MenuClick implements Listener {
                         lore.add(newLore);
                         i++;
                     }
+                    lore.add("§c" + files.getConfig("items.yml").get(key + "cooldown") + "§fseconds cooldown");
 
                     meta.setLore(lore);
                     heldItem.setItemMeta(meta);
@@ -83,13 +84,25 @@ public class MenuClick implements Listener {
                         player.setItemInHand(item);
                     }
                     ItemMeta meta = heldItem.getItemMeta();
-                    List oldMeta = player.getInventory().getItemInMainHand().getItemMeta().getLore();
                     List<String> lore = meta.hasLore() ? meta.getLore() : new ArrayList<>();
-                    lore.add("§eRIGHT CLICK ABILITY: " + "§7Launch up about 6 blocks");
+                    lore.add(files.getConfig("items.yml").getString(key + ".lore"));
+                    int i = 1;
+                    String newLore;
+                    while (true) {
+                        newLore = files.getConfig("items.yml").getString(key + "." + i);
+                        if (newLore == null) {
+                            break;
+                        }
+                        lore.add(newLore);
+                        i++;
+                    }
+                    lore.add("§c" + files.getConfig("items.yml").get(key + "cooldown") + "§fseconds cooldown");
+
                     meta.setLore(lore);
                     heldItem.setItemMeta(meta);
                     player.getInventory().setItemInMainHand(heldItem);
-                    player.sendMessage(ChatColor.GOLD + "Test");
+                    heldItem = NBTEditor.set(heldItem, "LAUNCHER", "itemsystem", "key");
+                    player.setItemInHand(heldItem);
                 }
             }
 /*
