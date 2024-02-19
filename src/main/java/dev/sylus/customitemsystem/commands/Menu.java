@@ -2,6 +2,7 @@ package dev.sylus.customitemsystem.commands;
 
 
 import dev.sylus.customitemsystem.CustomItemSystem;
+import dev.sylus.customitemsystem.utils.Files;
 import io.github.bananapuncher714.nbteditor.NBTEditor;
 import org.bukkit.Bukkit;
 import org.bukkit.ChatColor;
@@ -17,13 +18,18 @@ import org.bukkit.inventory.Inventory;
 import org.bukkit.inventory.ItemFlag;
 import org.bukkit.inventory.ItemStack;
 import org.bukkit.inventory.meta.ItemMeta;
+
+import java.io.File;
 import java.util.ArrayList;
 import java.util.List;
+import java.util.Set;
 
 public class Menu implements CommandExecutor, Listener {
     private String invName = "Modify an Item";
+    Files files;
 
-    public Menu(CustomItemSystem plugin){
+    public Menu(CustomItemSystem plugin, Files filesInstance){
+        files = filesInstance;
         Bukkit.getPluginManager().registerEvents(this, plugin);
     }
 
@@ -85,7 +91,12 @@ public class Menu implements CommandExecutor, Listener {
         meta.addItemFlags(ItemFlag.HIDE_ENCHANTS);
         meta.setLore(lores);
         item.setItemMeta(meta);
-        NBTEditor.set(item, "ITEMSYSTEM", "value" );
+
+        for (String key : files.getConfig("items.yml").getKeys(false)) {
+            if (files.getConfig("items.yml").getString(key + ".item").equals(item.getType().toString())){
+                NBTEditor.set(item, "ITEMSYSTEM", key );
+            }
+        }
         return item;
     }
 }

@@ -26,7 +26,7 @@ public final class CustomItemSystem extends JavaPlugin {
 
 
         getCommand("fly").setExecutor(new Fly());
-        getCommand("menu").setExecutor(new Menu(this));
+        getCommand("menu").setExecutor(new Menu(this, files));
         getCommand("loreAddTest").setExecutor(new LoreAddTest());
         getCommand("getUUID").setExecutor(new GetUUID());
 
