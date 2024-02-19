@@ -18,31 +18,22 @@ public class Files {
     private CustomItemSystem main;
 
     public Files(CustomItemSystem mainInstance, String fileName){ // Constructor
-        main = mainInstance;
-        saveDefultConfig(fileName); // The file name is the name of the YAML file that will be worked with
+        this.main = mainInstance;
+       // saveDefultConfig(fileName); // The file name is the name of the YAML file that will be worked with
         // I am doing it like this, so I can re-use this code in future projects
         // without having to change a thing
     }
 
     public void reloadConfig(String fileName){
-        if (configFile == null){
-            configFile = new File(main.getDataFolder(), fileName);
+        if (this.configFile == null){
+            this.configFile = new File(main.getDataFolder(), fileName);
         }
-        dataConfig = YamlConfiguration.loadConfiguration(configFile);
-        InputStream defaultStream = main.getResource(fileName);
-
-        try {
-            if (!(configFile.exists())){
-                configFile.createNewFile();
-                Bukkit.getLogger().log(Level.WARNING, "Had to create file: " + fileName);
-            }
-        } catch (IOException exception) {
-            Bukkit.getLogger().log(Level.SEVERE, "Error creating file: " + fileName);
-        }
+        this.dataConfig = YamlConfiguration.loadConfiguration(this.configFile);
+        InputStream defaultStream = this.main.getResource(fileName);
 
         if (defaultStream != null){
             YamlConfiguration defaultConfig = YamlConfiguration.loadConfiguration(new InputStreamReader(defaultStream));
-            dataConfig.setDefaults(defaultConfig);
+            this.dataConfig.setDefaults(defaultConfig);
         } else {
             Bukkit.getLogger().log(Level.SEVERE, "File: " + fileName + " is NULL");
         }
@@ -52,15 +43,15 @@ public class Files {
         if (dataConfig == null){
             reloadConfig(fileName);
         }
-        return dataConfig;
+        return this.dataConfig;
     }
 
     public void saveConfig(String fileName){
-        if (dataConfig == null || configFile == null){
+        if (this.dataConfig == null || this.configFile == null){
             return;
         }
         try {
-            getConfig(fileName).save(configFile);
+            this.getConfig(fileName).save(this.configFile);
         } catch (IOException e) {
             Bukkit.getLogger().log(Level.SEVERE, "Could not save config for: " + fileName + " Stack trace: " + e);
         }

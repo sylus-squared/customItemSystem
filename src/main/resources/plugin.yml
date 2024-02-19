@@ -1,6 +1,6 @@
 name: newCustomItemSystem
 version: '${project.version}'
-main: com.sylus.newcustomitemsystem.NewCustomItemSystem
+main: dev.sylus.customitemsystem.CustomItemSystem
 api-version: 1.18
 
 commands:

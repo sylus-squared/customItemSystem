@@ -32,6 +32,7 @@ public class MenuClick implements Listener {
     /*
     The YAML file is structured as followed
     <key>:
+        item: <material>
         cooldown: <cooldown>
         lore: <lore1>
         ..... The number of lore lines depends on the item

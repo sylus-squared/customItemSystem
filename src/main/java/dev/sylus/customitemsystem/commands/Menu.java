@@ -2,6 +2,7 @@ package dev.sylus.customitemsystem.commands;
 
 
 import dev.sylus.customitemsystem.CustomItemSystem;
+import io.github.bananapuncher714.nbteditor.NBTEditor;
 import org.bukkit.Bukkit;
 import org.bukkit.ChatColor;
 import org.bukkit.Material;
@@ -84,6 +85,7 @@ public class Menu implements CommandExecutor, Listener {
         meta.addItemFlags(ItemFlag.HIDE_ENCHANTS);
         meta.setLore(lores);
         item.setItemMeta(meta);
+        NBTEditor.set(item, "ITEMSYSTEM", "value" );
         return item;
     }
 }

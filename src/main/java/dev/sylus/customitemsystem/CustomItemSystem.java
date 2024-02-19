@@ -9,7 +9,12 @@ import dev.sylus.customitemsystem.handlers.PlayerHandler;
 import dev.sylus.customitemsystem.manager.ItemManager;
 import dev.sylus.customitemsystem.events.MenuClick;
 import dev.sylus.customitemsystem.utils.Files;
+import org.bukkit.Bukkit;
 import org.bukkit.plugin.java.JavaPlugin;
+
+import java.io.File;
+import java.io.IOException;
+import java.util.logging.Level;
 
 public final class CustomItemSystem extends JavaPlugin {
     public Files files;
@@ -29,6 +34,7 @@ public final class CustomItemSystem extends JavaPlugin {
         new ItemManager();
         new ItemHandlers().itemHandlerHandler(this);
         new MenuClick(files).menuHandeler(this);
+
     }
 
     @Override
