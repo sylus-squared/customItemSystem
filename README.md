@@ -1,3 +1,7 @@
+**This was my first real project learning to use the spigot API and it sucks** </br>
+I was planning on remaking in now I know a lot more about spigot and can use it, but I can't be bothered </br>
+I like preservation so im leaving up the repo but I really hate it </br>
+
 This is a repo for a minecraft 1.18 custom item system I am making
 
 You are welcome to use it if you want but I would not recomend it
