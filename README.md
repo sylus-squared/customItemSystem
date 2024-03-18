@@ -2,6 +2,8 @@
 I was planning on remaking it now I know a lot more about spigot, but I can't be bothered </br>
 I like preservation so im leaving up the repo but I really hate how bad it is </br>
 -------------------------------------------------------------------------------------------
+(I even more hate that I gave it a star on my alt that I don't have access to anymore) </br>
+
 This is a repo for a minecraft 1.18 custom item system I am making
 
 You are welcome to use it if you want but I would not recomend it
